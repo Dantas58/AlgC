@@ -140,6 +140,7 @@ int garbCollection (THash t){   // não faço ideia se funfa
     for(j; j<Size; j++){
         if(t[j].status == Used){v[i] = t[j].chave; i++;}
     }
+    v[i] = '\0';
 
     initEmpty(t);
     i = 0;
@@ -167,5 +168,5 @@ void addicionar (char *s, THash t){
 
     if(key >= i) t[key].probC = key - i;  // Se for maior resolve key-i colisoes (Ex:. i = 5 e key = 7...a posição 5 e 6 estavam Used/Del e a 7 é a primeira Free, resolveu 2 coluisões)
 
-    else t[key].probC = Size-i+key;       // Se for menor resolveu todas as colisoes do indice inicial ate a ultima posição + da posiçõ inicial ate a posição em que se encontra
+    else t[key].probC = Size-i+key;       // Se for menor resolveu todas as colisoes do indice inicial ate a ultima posição + da posição inicial ate a posição em que se encontra
 }
