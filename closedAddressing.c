@@ -73,7 +73,7 @@ int remove (char *s, THash t){  //confusao nao sei se funfa
             atual->ocorr--;
             if(atual->ocorr == 0){
                 if(atual->prox && ant) ant->prox = atual->prox;
-                else if(atual->prox && !ant) atual = atual->prox;   // caso do primeiro elemento da lista ligada ficar com 0 ocorr e ant = NULL
+                else if(atual->prox && !ant) t[key] = atual->prox;   // caso do primeiro elemento da lista ligada ficar com 0 ocorr e ant = NULL
                 else ant->prox = NULL;
             }
             return 1;
