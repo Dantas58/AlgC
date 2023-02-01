@@ -52,8 +52,8 @@ void toHeap(int v[], int N){
 int kmaior (int v[], int N, int k){ // meu deus o struggle foi real nao sei quem é o doente mental que faria isto
                                     // em vez de ordenar so o array
     if(k>N) return -1;
-
-    int i = 0;
+                                    // update: era so dar bubbleUp ao inserir os primeiros elementos xd agora fica assim
+    int i = 0;                      // disclaimer o meu cerebro estava em papa nesta altura
     int h[k];
     while(i<k){
         h[i] = v[i];
@@ -120,11 +120,12 @@ int simplePath (Graph g, int v[], int k){   // nao faço ideia se funfa mas gost
         j = lookup(g, v[i]);
         if(j==-1) return -1;
 
-        while(g[j]){
-            if(g[j]->dest == v[i+1]) break;
-            g[j] = g[j]->next;
+        Graph aux = g;
+        while(aux[j]){                            
+            if(aux[j]->dest == v[i+1]) break;
+            aux[j] = aux[j]->next;
         }
-        if(!g[j]) return -1;
+        if(!aux[j]) return -1;
         i++;
     }
     return 1;
