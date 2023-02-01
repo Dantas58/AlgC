@@ -32,10 +32,10 @@ void bubbleDown (int i, int h[], int N){
     while(2*i+1<N){
 
         min = 2*i+1;
-        if(h[2*i+1] > h[2*i+2]) min = 2*i+2;
+        if(h[2*i+1] > h[2*i+2] && 2*i+2<N) min = 2*i+2;
 
-        if(h[i]>h[min]) swap(h, i, min);
-        i = min;
+        if(h[i]>h[min]) {swap(h, i, min); i = min;}
+        else return;
     }
 }
 
