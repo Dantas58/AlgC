@@ -97,7 +97,7 @@ int lookup(Graph g, int x){
 
     int i = 0;
     while(i<N){
-        if(g[i] == x) return i;
+        if(g[i]->dest == x) return i;
         i++;
     }
     return -1;
@@ -107,9 +107,9 @@ int lookup(Graph g, int x){
 int simplePath (Graph g, int v[], int k){   // nao faço ideia se funfa 
 
     int i = 0;
-
+    int j;
     for(i; i<k; i++){
-        int j = 0;
+        j = 0;
         for(j; j<k; j++){
             if(v[j]==v[i]) return -1;
         }

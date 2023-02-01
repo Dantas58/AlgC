@@ -27,7 +27,7 @@ ficam bem preenchidos e que a função executa em tempo linear.
 
     AVLTree t = NULL;   
     int meio = (N-1)/2;
-    while(N>0){
+    if(N>0){                         // while ou if (?)
         t = malloc(sizeof(AVLTree)); 
         t->valor = a[meio];
         t->esq = build(a, meio);   
