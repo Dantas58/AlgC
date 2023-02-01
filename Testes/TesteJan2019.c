@@ -104,7 +104,7 @@ int lookup(Graph g, int x){
 }
 
 
-int simplePath (Graph g, int v[], int k){   // nao faço ideia se funfa 
+int simplePath (Graph g, int v[], int k){   // nao faço ideia se funfa mas gosto de acreditar que sim
 
     int i = 0;
     int j;
