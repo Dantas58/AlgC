@@ -87,7 +87,7 @@ int colorOK (GrafoL g, int cor[]){
 }
 
 
-int homomorfOK (GrafoL g, GrafoL h, int f[]){   // tenho o cerebro em papa sou incapaz
+/*int homomorfOK (GrafoL g, GrafoL h, int f[]){   // tenho o cerebro em papa sou incapaz
 
     for(int i = 0; i<NV; i++){
         LAdj auxg = g[i];
@@ -97,3 +97,4 @@ int homomorfOK (GrafoL g, GrafoL h, int f[]){   // tenho o cerebro em papa sou i
         }
     }
 }
+*/
