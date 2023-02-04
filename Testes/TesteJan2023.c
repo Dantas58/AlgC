@@ -36,7 +36,7 @@ int depth(AVLTree t) {
         t->valor = a[meio];
         t->esq = build(a, meio);   
         t->dir = build(a+meio+1, N-meio-1);
-        t->bal = abs(depth(t->esq, 1) - depth(t->dir, 1));
+        t->bal = abs(depth(t->esq) - depth(t->dir));
     }
     return t;    
  }
