@@ -37,16 +37,18 @@ void give_elems(Tree t){
 }
 
 
-Tree rotateLeft(Tree t){        // acho que dá (?)   
+Tree rotateLeft(Tree t){     // acho que dá (?)   
 
     Tree aux = t->right;
     t->right = aux->left;
     aux->left = t;
+    t = aux;
 
     give_elems(t);
 
     return t;
 }
+
 
 /*
 (ii) Pretende-se utilizar estas árvores para a implementação de conjuntos de
