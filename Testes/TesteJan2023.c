@@ -16,11 +16,15 @@ Defina uma função AVLTree build (int a[], int N) que constrói uma
 ficam bem preenchidos e que a função executa em tempo linear.
 */
 
- int depth (AVLTree t, int r){
+int depth(AVLTree t) {
+    if (!t) return 0;
 
-    if(t) return depth(t->esq, r+1)+depth(t->dir, r+1);
-    return r;
- }
+    int depth_esq = depth(t->esq);
+    int depth_dir = depth(t->dir);
+
+    if(depth_esq > depth_dir) return 1+depth_esq;
+    return 1+depth_dir;
+}
 
 
  AVLTree build (int a[], int N){   //nao sei se funfa
