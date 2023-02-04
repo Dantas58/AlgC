@@ -110,26 +110,3 @@ coordenadas 0 ou N-1.
 */
 
 // xd nao
-
-
-
-int weight(BTree t) {
-    if (!t) return 0;
-
-    return (1+weight(t->right)+weight(t->left));
-}
-
-int check (BTree t){
-
-    if(!t) return 0;
-
-    return(t->weight == weight(t));
-}
-
-int checkWeight(BTree t){
-
-    if(!t) return 0;
-
-    if(check(t)) return(checkWeight(t->right) && checkWeight(t->left));
-    return 0;
-}
